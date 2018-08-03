@@ -1,0 +1,41 @@
+/* common */
+.box {
+  padding: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 纯css loading动效，兼容到 ie9 */
+.doting {
+  display: inline-block;
+  margin-left: 3px;
+  width: 12px;
+  min-height: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  box-sizing: border-box;
+  animation: dot 2s infinite step-start both;
+}
+.doting:before {
+  content: "";
+}
+
+@keyframes dot {
+  /* 0个点 */
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  /* 1个点 */
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+  /* 2个点 */
+  75% {
+    border-right-color: transparent;
+  }
+}
